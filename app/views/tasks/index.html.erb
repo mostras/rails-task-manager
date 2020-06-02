@@ -1,9 +1,9 @@
 <h1>HERE ARE ALL YOUR TASKS</h1>
 
-<%= link_to("Create New Task", new_path) %>
+<%= link_to("Create New Task", new_task_path) %>
 
 <% @tasks.each do |task| %>
 <ul>
-  <li> <%= task.completed ? '✓' : '▢' %> | <%= link_to task.title, show_path(task) %></li>
+  <li> <%= task.completed ? '✓' : '▢' %> | <%= link_to task.title, task_path(task) %></li>
 </ul>
 <% end %>
