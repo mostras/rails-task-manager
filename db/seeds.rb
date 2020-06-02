@@ -7,9 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "-------------- starting creation --------------"
 
+Task.destroy_all
+
 20.times do
   Task.create(
     title: Faker::TvShows::GameOfThrones.character,
-    details: Faker::TvShows::GameOfThrones.quote
+    details: Faker::TvShows::GameOfThrones.quote,
+    completed: false
   )
+  puts "-------- DONE !"
 end
+
+puts "-------------- ending creation --------------"

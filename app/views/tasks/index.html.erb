@@ -1,7 +1,7 @@
 <h1>HERE ARE ALL YOUR TASKS</h1>
 
 <% @tasks.each do |task| %>
-  <p><%= task.title %></p>
-  <p><%= task.details %></p>
-  <p><%= task.completed %></p>
+<ul>
+  <li> <%= task.completed ? '✓' : '▢' %> | <%= link_to task.title, show_path(task) %></li>
+</ul>
 <% end %>
